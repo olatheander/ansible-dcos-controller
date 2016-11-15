@@ -1,9 +1,9 @@
 {
-  "id": "tutum-hello-world",
+  "id": "dockercloud-hello-world",
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "tutum/hello-world",
+      "image": "dockercloud/hello-world",
       "network": "BRIDGE",
       "portMappings": [
         { "hostPort": 0, "containerPort": 80, "servicePort": 10000 }
