@@ -1,13 +1,13 @@
 ---
 
+- name: Template 'marathon-lb.json' to controller host.
+  template:
+    src: marathon-lb.json.j2
+    dest: ./marathon-lb.json
+    mode: 0440
+
 - name: Install marathon-lb load balancer
-  command: dcos package install --yes marathon-lb
-
-- name: Wait a bit for the package install to complete
-  pause: seconds=30
-
-- name: Scale the martathon-lb to run on each public agent
-  command: dcos marathon app update /marathon-lb instances="{{ groups['tag_dcos_slave_public'] | length }}"
+  command: dcos marathon app add ./marathon-lb.json
 
 - debug: var=dcos_install_demo_sd_and_lb_nginx verbosity=1
 
