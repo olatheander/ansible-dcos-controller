@@ -7,7 +7,7 @@
     mode: 0440
 
 - name: Install marathon-lb load balancer
-  command: dcos marathon app add ./marathon-lb.json
+  command: "{{ dcos_cli_install_path }} marathon app add ./marathon-lb.json"
 
 - debug: var=dcos_install_demo_sd_and_lb_nginx verbosity=1
 

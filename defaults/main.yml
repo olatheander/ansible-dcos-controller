@@ -8,8 +8,8 @@ dcos_install_demo_sd_and_lb_nginx: "{{ lookup('env', 'DCOS_CONTROLLER_INSTALL_DE
 dcos_install_demo_dockercloud_hello_world: "{{ lookup('env', 'DCOS_CONTROLLER_INSTALL_DOCKERCLOUD_HELLO_WORLD') | default(false, true) | bool }}"
 
 # Marathon-LB defaults
-marathon-lb_docker_image: "mesosphere/marathon-lb:v1.4.2"
-marathon-lb_base_service_port: 10000
+marathonlb_docker_image: "mesosphere/marathon-lb:v1.4.2"
+marathonlb_base_service_port: 10000
 
 # Docker Cloud demo defaults
 dockercloud_demo_service_port: "{{ lookup('env', 'DOCKERCLOUD_DEMO_SERVICE_PORT') | default(10000, true) }}"

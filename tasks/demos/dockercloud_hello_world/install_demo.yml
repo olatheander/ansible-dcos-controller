@@ -19,5 +19,5 @@
     mode: 0440
     
 - name: Launch external Dockercloud hello-world sample application.
-  command: dcos marathon app add ./dockercloud.json
+  command: "{{ dcos_cli_install_path }} marathon app add ./dockercloud.json"
 
