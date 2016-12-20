@@ -15,4 +15,6 @@ llo-world) demo.
 ## Service Discovery and Load Balancing
 Install the Service Discovery and Load Balancing demo by Mesosphere.
 
+### Environment variables
+
 * DCOS_CONTROLLER_INSTALL_DEMO_SD_AND_LB_NGINX: `true` - install demo setting up Nginx as described in [Service discovery and load balancing with DCOS and marathon-lb: Part 1](https://mesosphere.com/blog/2015/12/04/dcos-marathon-lb/).
